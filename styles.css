@@ -1,0 +1,105 @@
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+.container {
+    max-width: 520px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image {
+    width: 50%;
+}
+
+.texts {
+    width: 50%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+}
+.texts h4 {
+    color: hsl(219, 9%, 45%);
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.price h2 {
+    color: hsl(158, 36%, 37%);
+    font-size: bold;
+    margin: 0;
+}
+.price h6 {
+    color: hsl(219, 9%, 45%);
+    text-decoration: line-through;
+    font-size: 14px;
+    margin: 0;
+}
+button {
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    padding: 14px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;      /* Vertically center icon and text */
+    justify-content: center;  /* Center content horizontally */
+    gap: 12px;                /* Space between icon and text */
+    width: 100%;              /* Make button full width of parent */
+    margin: 0 auto 20px auto; /* Center button and add bottom margin */
+}
+
+button img {
+    width: 18px;   /* Set a fixed width for the icon */
+    height: 18px;  /* Set a fixed height for the icon */
+    display: block;
+}
+/* Responsive styles for mobile */
+@media (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        max-width: 95vw;
+        margin-top: 30px;
+    }
+    .image,
+    .texts {
+        width: 100%;
+    }
+    .image {
+        height: 240px;
+    }
+    .product-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+    .texts {
+        padding: 18px;
+    }
+}
